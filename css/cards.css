@@ -1,0 +1,37 @@
+.cards {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, auto));
+    gap: 2em;
+
+    /* Each section is a card */
+    > section {
+        background-color: white;
+        box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.15);
+        height: 300px;
+        overflow: hidden;
+
+        > figure {
+            min-height: 200px;
+        }
+
+        > div {
+            padding: 1em;
+
+            > header {
+                color: var(--color-dark);
+                border-bottom: 2px solid var(--color-main);
+                margin-bottom: 1em;
+                padding-bottom: 1em;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .cards {
+        > section {
+            height: fit-content;
+        }
+    }
+}

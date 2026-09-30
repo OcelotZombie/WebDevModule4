@@ -1,0 +1,124 @@
+:root {
+    --color-dark: #0A1128;
+    --color-light: #faf8ec;
+    --color-main: #5a5555;
+    --color-link: #e28204;
+    --site-width: 1100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+figure {
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    img:has(+figcaption) {
+        height: calc(100% - 1em);
+    }
+
+}
+
+body {
+    font-family: sans-serif;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+
+    >header {
+        background-color: var(--color-dark);
+        color: whitesmoke;
+        padding: 1em 0 0 0;
+        font-size: 1.2em;
+
+        strong,
+        em {
+            display: block;
+        }
+
+        img {
+            height: 250px;
+            width: 100%;
+            display: flex;
+            object-fit: cover;
+        }
+    }
+}
+
+article {
+    font-family: sans-serif;
+
+    header {
+        font-size: 1.2em;
+        padding: 1em;
+        font-weight: bold;
+    }
+}
+
+footer {
+    text-align: center;
+    font-weight: bold;
+    padding: 2em;
+}
+
+/*
+    Class is a way to apply styles to many elements
+        - In CSS period means class
+*/
+
+.site-width {
+    /* Width is not very responsive
+    max-width is more responsive */
+    max-width: var(--site-width);
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+.btn {
+    background-color: var(--color-link);
+    padding: 1em;
+    display: inline-block;
+    color: var(--color-light);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity .2s ease-in-out;
+    margin-top: 1em;
+}
+
+.btn:hover {
+    opacity: .8;
+}
+
+p {
+    margin-bottom: 1em;
+    font-size: 1em;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+ul,
+ol {
+    margin-left: 1em;
+}
+
+.highlight {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 1em;
+}
+
+.feature-list {
+    header {
+        border-bottom: 2px solid var(--color-dark);
+        padding-bottom: .5em;
+        margin-bottom: 1em;
+    }
+}

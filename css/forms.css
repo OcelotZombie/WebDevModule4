@@ -1,0 +1,42 @@
+form {
+    margin: 2em auto;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 20px;
+
+    > header {
+        background-color: var(--color-dark);
+        color: white;
+        padding: 1em;
+        border-radius: 20px 20px 0 0;
+    }
+
+    > div {
+        padding: 1.5em;
+    }
+
+    label, input {
+        display: block;
+        width: 100%
+    }
+
+    label {
+        margin-bottom: .25em;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: .8em;
+    }
+
+    input {
+        margin-bottom: 1em;
+        padding: .75em;
+        border: none;
+        background-color: #EEEEEE;
+    }
+
+    input[type="submit"] {
+        width: fit-content;
+        margin: 0 auto;
+        display: block;
+    }
+}
